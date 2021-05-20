@@ -126,9 +126,9 @@ namespace Cambios
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(428, 234);
+            this.progressBar1.Location = new System.Drawing.Point(391, 234);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Size = new System.Drawing.Size(137, 23);
             this.progressBar1.TabIndex = 9;
             // 
             // form1
