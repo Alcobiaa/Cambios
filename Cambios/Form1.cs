@@ -19,6 +19,8 @@
         {
             //bool load;
 
+            progressBar1.Value = 0;
+
             var client = new HttpClient();
             client.BaseAddress = new Uri("http://cambios.somee.com");
 
@@ -35,6 +37,14 @@
             var rates = JsonConvert.DeserializeObject<List<Rate>>(result);
 
             cb_Origem.DataSource = rates;
+            cb_Origem.DisplayMember = "Name";
+
+            cb_Destino.BindingContext = new BindingContext();
+
+            cb_Destino.DataSource = rates;
+            cb_Destino.DisplayMember = "Name";
+
+            progressBar1.Value = 100;
         }
     }
 }
