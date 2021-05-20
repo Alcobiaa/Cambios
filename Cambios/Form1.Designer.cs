@@ -29,6 +29,7 @@ namespace Cambios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form1));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Valor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@ namespace Cambios
             this.lbl_Resultado = new System.Windows.Forms.Label();
             this.lbl_Status = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btn_Troca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +98,7 @@ namespace Cambios
             // 
             // btn_Converter
             // 
+            this.btn_Converter.Enabled = false;
             this.btn_Converter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Converter.Location = new System.Drawing.Point(424, 36);
             this.btn_Converter.Name = "btn_Converter";
@@ -103,6 +106,7 @@ namespace Cambios
             this.btn_Converter.TabIndex = 6;
             this.btn_Converter.Text = "Converter";
             this.btn_Converter.UseVisualStyleBackColor = true;
+            this.btn_Converter.Click += new System.EventHandler(this.btn_Converter_Click);
             // 
             // lbl_Resultado
             // 
@@ -117,10 +121,10 @@ namespace Cambios
             // lbl_Status
             // 
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Status.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Status.Location = new System.Drawing.Point(26, 237);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(50, 20);
+            this.lbl_Status.Size = new System.Drawing.Size(38, 16);
             this.lbl_Status.TabIndex = 8;
             this.lbl_Status.Text = "status";
             // 
@@ -131,11 +135,23 @@ namespace Cambios
             this.progressBar1.Size = new System.Drawing.Size(137, 23);
             this.progressBar1.TabIndex = 9;
             // 
+            // btn_Troca
+            // 
+            this.btn_Troca.Enabled = false;
+            this.btn_Troca.Image = ((System.Drawing.Image)(resources.GetObject("btn_Troca.Image")));
+            this.btn_Troca.Location = new System.Drawing.Point(440, 98);
+            this.btn_Troca.Name = "btn_Troca";
+            this.btn_Troca.Size = new System.Drawing.Size(53, 56);
+            this.btn_Troca.TabIndex = 10;
+            this.btn_Troca.UseVisualStyleBackColor = true;
+            this.btn_Troca.Click += new System.EventHandler(this.btn_Troca_Click);
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 272);
+            this.Controls.Add(this.btn_Troca);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbl_Status);
             this.Controls.Add(this.lbl_Resultado);
@@ -165,6 +181,7 @@ namespace Cambios
         private System.Windows.Forms.Label lbl_Resultado;
         private System.Windows.Forms.Label lbl_Status;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button btn_Troca;
     }
 }
 
